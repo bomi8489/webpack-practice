@@ -3,7 +3,7 @@ import Note from '../components/Container/Note'
 
 function Home() {
     return (
-        <div className='m-auto h-screen w-1/2 relative'>
+        <div className='m-auto w-1/2 relative'>
             <Note />
         </div>
     )
