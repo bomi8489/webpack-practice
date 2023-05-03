@@ -42,6 +42,7 @@ function Note() {
     }, [noteType])
 
     useEffect(() => {
+        console.log(noteList);
         if(noteList.length % 5 == 0) {
             addBtnRef.current.className = 
             'h-[160px] w-[160px] bg-[#C9CAC9] rounded-[15px] m-[8px] ml-[0px] hover:cursor-pointer flex justify-center items-center'
@@ -74,7 +75,7 @@ function Note() {
             <div className='bg-black mb-7 w-[880px] flex flex-wrap'>
                 {noteList.length >= 1 && 
                 noteList.map((textObj, idx) => (
-                    <NoteContents noteType={noteType} key={idx} textareaRef={textareaRef} textObj={textObj} text={text}/>
+                    <NoteContents noteType={noteType} key={idx} textareaRef={textareaRef} textObj={textObj}/>
                 ))
                 }
                 <div ref={addBtnRef} onClick={clickAdd} className='h-[160px] w-[160px] bg-[#C9CAC9] rounded-[15px] m-[8px] hover:cursor-pointer flex justify-center items-center'>
